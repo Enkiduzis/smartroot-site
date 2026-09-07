@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gProj4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B233C"/>
+      <stop offset="100%" stop-color="#061321"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="420" rx="18" fill="url(#gProj4)"/>
+  <g transform="translate(60, 40)">
+    <!-- Security Shield & Biometrics Graphic -->
+    <g transform="translate(40, 50)">
+      <!-- Shield shape -->
+      <path d="M70 20 L130 50 L130 140 Q130 190 70 220 Q10 190 10 140 L10 50 Z" fill="#132338" stroke="#00D2FF" stroke-width="2"/>
+      <!-- Fingerprint & Facial lines -->
+      <path d="M70 70 Q50 90 50 120 Q50 150 70 170" stroke="#00D2FF" stroke-width="2.5" fill="none"/>
+      <path d="M70 85 Q60 100 60 120 Q60 140 70 155" stroke="#388BFD" stroke-width="2.5" fill="none"/>
+      <path d="M70 100 Q65 110 65 120 Q65 130 70 140" stroke="#10B981" stroke-width="2.5" fill="none"/>
+      <circle cx="70" cy="120" r="3" fill="#00D2FF"/>
+    </g>
+    
+    <!-- Right side credentials matrix -->
+    <g transform="translate(220, 50)">
+      <rect x="0" y="0" width="260" height="220" rx="12" fill="#0E1928" stroke="#1D314B"/>
+      <text x="20" y="35" font-family="system-ui" font-size="13" font-weight="700" fill="#E2E8F0">CONTROLE DE ACESSO CENTRAL</text>
+      
+      <rect x="20" y="55" width="220" height="40" rx="6" fill="#172940"/>
+      <text x="35" y="80" font-family="system-ui" font-size="12" fill="#10B981">✓ Catracas Ópticas Integradas</text>
+      
+      <rect x="20" y="105" width="220" height="40" rx="6" fill="#172940"/>
+      <text x="35" y="130" font-family="system-ui" font-size="12" fill="#00D2FF">✓ Criptografia AES-256 e TLS 1.3</text>
+      
+      <rect x="20" y="155" width="220" height="40" rx="6" fill="#172940"/>
+      <text x="35" y="180" font-family="system-ui" font-size="12" fill="#F59E0B">✓ Reconhecimento Facial &lt; 0.3s</text>
+    </g>
+  </g>
+</svg>

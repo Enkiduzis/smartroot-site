@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="100%" height="100%">
+  <rect width="200" height="60" rx="8" fill="none"/>
+  <polygon points="20,40 35,18 50,40" fill="#134074"/>
+  <polygon points="35,40 45,26 55,40" fill="#00D2FF"/>
+  <text x="68" y="37" font-family="system-ui, sans-serif" font-weight="700" font-size="16" fill="#1E293B">NEXUS</text>
+  <text x="135" y="37" font-family="system-ui, sans-serif" font-weight="400" font-size="11" fill="#64748B">IND</text>
+</svg>

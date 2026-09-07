@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="protoBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="400" fill="url(#protoBg)"/>
+
+  <!-- Background robotic & assembly line accents -->
+  <g stroke="#38BDF8" stroke-opacity="0.1" stroke-width="1.5">
+    <line x1="50" y1="200" x2="550" y2="200"/>
+    <line x1="50" y1="260" x2="550" y2="260"/>
+  </g>
+
+  <!-- 4 Stage Pipeline from PDF 1 (PoC -> Bancada -> Iteração -> Lote) -->
+  <!-- Stage 1: PoC -->
+  <rect x="50" y="110" width="115" height="180" rx="12" fill="#0B2139" stroke="#38BDF8" stroke-width="1.5" filter="drop-shadow(0 10px 20px rgba(0,0,0,0.5))"/>
+  <circle cx="107" cy="145" r="18" fill="#38BDF8" fill-opacity="0.2"/>
+  <text x="107" y="150" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="12" font-weight="800" text-anchor="middle">PoC</text>
+  <text x="107" y="190" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Prova de</text>
+  <text x="107" y="206" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Conceito</text>
+  <text x="107" y="235" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">Validação rápida</text>
+  <text x="107" y="250" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">de hardware/sw</text>
+
+  <!-- Arrow 1 -->
+  <path d="M165 200 L185 200" stroke="#38BDF8" stroke-width="2"/>
+  <polygon points="183,196 189,200 183,204" fill="#38BDF8"/>
+
+  <!-- Stage 2: Montagem e Testes -->
+  <rect x="185" y="110" width="115" height="180" rx="12" fill="#0B2139" stroke="#06B6D4" stroke-width="1.5" filter="drop-shadow(0 10px 20px rgba(0,0,0,0.5))"/>
+  <circle cx="242" cy="145" r="18" fill="#06B6D4" fill-opacity="0.2"/>
+  <text x="242" y="150" fill="#06B6D4" font-family="system-ui, sans-serif" font-size="12" font-weight="800" text-anchor="middle">LAB</text>
+  <text x="242" y="190" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Montagem &amp;</text>
+  <text x="242" y="206" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Testes</text>
+  <text x="242" y="235" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">Bancada própria</text>
+  <text x="242" y="250" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">Instrumentação</text>
+
+  <!-- Arrow 2 -->
+  <path d="M300 200 L320 200" stroke="#06B6D4" stroke-width="2"/>
+  <polygon points="318,196 324,200 318,204" fill="#06B6D4"/>
+
+  <!-- Stage 3: Iteração Ágil -->
+  <rect x="320" y="110" width="115" height="180" rx="12" fill="#0B2139" stroke="#F59E0B" stroke-width="1.5" filter="drop-shadow(0 10px 20px rgba(0,0,0,0.5))"/>
+  <circle cx="377" cy="145" r="18" fill="#F59E0B" fill-opacity="0.2"/>
+  <text x="377" y="150" fill="#F59E0B" font-family="system-ui, sans-serif" font-size="12" font-weight="800" text-anchor="middle">AGIL</text>
+  <text x="377" y="190" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Iteração</text>
+  <text x="377" y="206" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Rápida</text>
+  <text x="377" y="235" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">Ajustes diretos</text>
+  <text x="377" y="250" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">em hardware/fw</text>
+
+  <!-- Arrow 3 -->
+  <path d="M435 200 L455 200" stroke="#10B981" stroke-width="2"/>
+  <polygon points="453,196 459,200 453,204" fill="#10B981"/>
+
+  <!-- Stage 4: Fabricação em Lote -->
+  <rect x="455" y="105" width="115" height="190" rx="12" fill="#042F2E" stroke="#10B981" stroke-width="2" filter="drop-shadow(0 10px 25px rgba(16,185,129,0.3))"/>
+  <circle cx="512" cy="140" r="18" fill="#10B981" fill-opacity="0.25"/>
+  <text x="512" y="145" fill="#34D399" font-family="system-ui, sans-serif" font-size="12" font-weight="800" text-anchor="middle">LOTE</text>
+  <text x="512" y="185" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Produção</text>
+  <text x="512" y="201" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">em Escala</text>
+  <text x="512" y="230" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">Sem estoque mín.</text>
+  <text x="512" y="245" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">Rastreabilidade</text>
+
+  <!-- Header Banner -->
+  <rect x="150" y="45" width="300" height="32" rx="16" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+  <text x="300" y="66" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">DO CONCEITO À PRODUÇÃO EM LOTE</text>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gProj2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#092138"/>
+      <stop offset="100%" stop-color="#04111E"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="420" rx="18" fill="url(#gProj2)"/>
+  <g transform="translate(60, 50)">
+    <!-- Central LoRa Gateway Station -->
+    <rect x="220" y="40" width="80" height="120" rx="10" fill="#1E293B" stroke="#00D2FF" stroke-width="2"/>
+    <line x1="260" y1="40" x2="260" y2="10" stroke="#00D2FF" stroke-width="4"/>
+    <circle cx="260" cy="10" r="6" fill="#F59E0B"/>
+    <circle cx="260" cy="10" r="18" stroke="#F59E0B" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <circle cx="260" cy="10" r="32" stroke="#F59E0B" stroke-width="1.5" fill="none" opacity="0.3"/>
+    
+    <!-- Remote Nodes sending signals -->
+    <g transform="translate(40, 180)">
+      <rect x="0" y="0" width="90" height="60" rx="8" fill="#0F172A" stroke="#334155"/>
+      <text x="12" y="24" font-family="system-ui" font-size="10" fill="#94A3B8">NÓ 01 • TEMP</text>
+      <text x="12" y="45" font-family="system-ui" font-size="16" font-weight="700" fill="#00D2FF">24.2°C</text>
+      <path d="M45 -5 Q120 -80 220 -100" stroke="#00D2FF" stroke-width="1.5" stroke-dasharray="4 4" fill="none"/>
+    </g>
+    
+    <g transform="translate(390, 180)">
+      <rect x="0" y="0" width="90" height="60" rx="8" fill="#0F172A" stroke="#334155"/>
+      <text x="12" y="24" font-family="system-ui" font-size="10" fill="#94A3B8">NÓ 02 • VIBRAÇÃO</text>
+      <text x="12" y="45" font-family="system-ui" font-size="16" font-weight="700" fill="#10B981">0.12 g</text>
+      <path d="M45 -5 Q-40 -80 -110 -100" stroke="#10B981" stroke-width="1.5" stroke-dasharray="4 4" fill="none"/>
+    </g>
+    
+    <!-- Metrics Badge -->
+    <rect x="100" y="260" width="320" height="44" rx="10" fill="#0C1B2A" stroke="#1E293B"/>
+    <text x="130" y="287" font-family="system-ui" font-size="13" font-weight="600" fill="#E2E8F0">+150 nós ativos | Autonomia de 4+ anos</text>
+  </g>
+</svg>

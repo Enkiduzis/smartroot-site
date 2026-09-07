@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gProj3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#082136"/>
+      <stop offset="100%" stop-color="#05121F"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="420" rx="18" fill="url(#gProj3)"/>
+  <g transform="translate(60, 40)">
+    <!-- VR Visor / Virtual Panel Simulator Frame -->
+    <rect x="20" y="30" width="480" height="260" rx="16" fill="#0E1927" stroke="#388BFD" stroke-width="2"/>
+    <rect x="40" y="50" width="440" height="40" rx="8" fill="#182A40"/>
+    <text x="60" y="75" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#00D2FF">Módulo Didático: Manobra de Chaveamento em Alta Tensão</text>
+    
+    <!-- Virtual Controls inside simulator -->
+    <g transform="translate(60, 110)">
+      <rect x="0" y="0" width="160" height="140" rx="8" fill="#142234" stroke="#253D5C"/>
+      <text x="15" y="30" font-family="system-ui" font-size="12" fill="#94A3B8">Status do Disjuntor</text>
+      <rect x="20" y="50" width="120" height="35" rx="6" fill="#10B981"/>
+      <text x="45" y="72" font-family="system-ui" font-size="13" font-weight="700" fill="#062818">LIGADO (OK)</text>
+      <text x="20" y="115" font-family="system-ui" font-size="11" fill="#64748B">Trava de segurança: Ativa</text>
+    </g>
+    
+    <g transform="translate(250, 110)">
+      <rect x="0" y="0" width="210" height="140" rx="8" fill="#142234" stroke="#253D5C"/>
+      <text x="15" y="30" font-family="system-ui" font-size="12" fill="#94A3B8">Métricas de Precisão do Aluno</text>
+      <text x="15" y="65" font-family="system-ui" font-size="28" font-weight="800" fill="#F59E0B">98.4%</text>
+      <text x="15" y="88" font-family="system-ui" font-size="12" fill="#10B981">Zero infrações normativas (NR-10)</text>
+      <text x="15" y="115" font-family="system-ui" font-size="11" fill="#94A3B8">Tempo de resposta: 1min 22s</text>
+    </g>
+  </g>
+</svg>

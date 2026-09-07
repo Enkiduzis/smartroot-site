@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07172A" />
+      <stop offset="50%" stop-color="#0B2545" />
+      <stop offset="100%" stop-color="#081423" />
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D2FF" />
+      <stop offset="100%" stop-color="#0066FF" />
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    <filter id="glowEffect" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <!-- Main Card Container -->
+  <rect x="20" y="20" width="760" height="520" rx="28" fill="url(#bgGrad)" stroke="rgba(255,255,255,0.15)" stroke-width="2" filter="url(#cardShadow)" />
+
+  <!-- Background Mesh & Circuit Grid -->
+  <g opacity="0.25">
+    <line x1="60" y1="120" x2="740" y2="120" stroke="#00D2FF" stroke-width="1" stroke-dasharray="4 4" />
+    <line x1="60" y1="240" x2="740" y2="240" stroke="#00D2FF" stroke-width="1" stroke-dasharray="4 4" />
+    <line x1="60" y1="360" x2="740" y2="360" stroke="#00D2FF" stroke-width="1" stroke-dasharray="4 4" />
+    <line x1="200" y1="40" x2="200" y2="500" stroke="#00D2FF" stroke-width="1" stroke-dasharray="4 4" />
+    <line x1="400" y1="40" x2="400" y2="500" stroke="#00D2FF" stroke-width="1" stroke-dasharray="4 4" />
+    <line x1="600" y1="40" x2="600" y2="500" stroke="#00D2FF" stroke-width="1" stroke-dasharray="4 4" />
+  </g>
+
+  <!-- Neural / IoT Network Constellation -->
+  <g stroke="rgba(0, 210, 255, 0.45)" stroke-width="1.5">
+    <line x1="420" y1="180" x2="520" y2="140" />
+    <line x1="520" y1="140" x2="620" y2="190" />
+    <line x1="620" y1="190" x2="680" y2="280" />
+    <line x1="680" y1="280" x2="580" y2="320" />
+    <line x1="580" y1="320" x2="480" y2="270" />
+    <line x1="480" y1="270" x2="420" y2="180" />
+    <line x1="520" y1="140" x2="480" y2="270" />
+    <line x1="620" y1="190" x2="580" y2="320" />
+    <line x1="480" y1="270" x2="550" y2="220" />
+    <line x1="550" y1="220" x2="620" y2="190" />
+  </g>
+
+  <!-- Glowing Nodes -->
+  <circle cx="420" cy="180" r="6" fill="#00D2FF" filter="url(#glowEffect)" />
+  <circle cx="520" cy="140" r="5" fill="#388BFD" />
+  <circle cx="620" cy="190" r="7" fill="#00D2FF" filter="url(#glowEffect)" />
+  <circle cx="680" cy="280" r="6" fill="#10B981" filter="url(#glowEffect)" />
+  <circle cx="580" cy="320" r="8" fill="#F59E0B" filter="url(#glowEffect)" />
+  <circle cx="480" cy="270" r="6" fill="#00D2FF" />
+  <circle cx="550" cy="220" r="10" fill="#0066FF" filter="url(#glowEffect)" />
+
+  <!-- Interactive Play / Showcase Trigger (Inspired by reference) -->
+  <g transform="translate(510, 180)">
+    <circle cx="40" cy="40" r="38" fill="url(#amberGrad)" filter="url(#glowEffect)" />
+    <circle cx="40" cy="40" r="30" fill="#F59E0B" />
+    <polygon points="36,28 36,52 52,40" fill="#0F172A" />
+  </g>
+
+  <!-- Left Side: System Telemetry & SmartRoot Hub Status -->
+  <g transform="translate(60, 80)">
+    <!-- Brand Label -->
+    <rect x="0" y="0" width="160" height="32" rx="8" fill="rgba(0, 210, 255, 0.12)" stroke="rgba(0, 210, 255, 0.3)" stroke-width="1" />
+    <circle cx="16" cy="16" r="4" fill="#10B981" />
+    <text x="30" y="21" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#00D2FF" letter-spacing="1">SMART CORE 3.0</text>
+
+    <!-- Headline inside Graphic -->
+    <text x="0" y="80" font-family="system-ui, sans-serif" font-size="28" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">Ecossistema Conectado</text>
+    <text x="0" y="110" font-family="system-ui, sans-serif" font-size="15" font-weight="400" fill="#94A3B8">Hardware proprietário, IoT e software em sincronia contínua.</text>
+
+    <!-- Telemetry Stats Cards -->
+    <g transform="translate(0, 150)">
+      <rect x="0" y="0" width="150" height="80" rx="14" fill="rgba(255, 255, 255, 0.05)" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1" />
+      <text x="16" y="30" font-family="system-ui, sans-serif" font-size="12" font-weight="500" fill="#94A3B8">Dispositivos Ativos</text>
+      <text x="16" y="62" font-family="system-ui, sans-serif" font-size="26" font-weight="800" fill="#00D2FF">2.450+</text>
+
+      <rect x="165" y="0" width="150" height="80" rx="14" fill="rgba(255, 255, 255, 0.05)" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1" />
+      <text x="181" y="30" font-family="system-ui, sans-serif" font-size="12" font-weight="500" fill="#94A3B8">Latência Média</text>
+      <text x="181" y="62" font-family="system-ui, sans-serif" font-size="26" font-weight="800" fill="#10B981">14ms</text>
+    </g>
+
+    <!-- Bottom Pulse Indicator -->
+    <g transform="translate(0, 260)">
+      <rect x="0" y="0" width="315" height="54" rx="12" fill="rgba(0, 102, 255, 0.1)" stroke="rgba(0, 102, 255, 0.25)" stroke-width="1" />
+      <circle cx="24" cy="27" r="6" fill="#10B981" filter="url(#glowEffect)" />
+      <text x="42" y="32" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#E2E8F0">Rede IoT com criptografia de ponta a ponta</text>
+    </g>
+  </g>
+
+  <!-- Bottom Bar: Highlight Message (as seen in reference) -->
+  <g transform="translate(60, 460)">
+    <line x1="0" y1="0" x2="680" y2="0" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1" />
+    <text x="0" y="32" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">Conheça a SmartRoot</text>
+    <text x="180" y="32" font-family="system-ui, sans-serif" font-size="14" font-weight="400" fill="#94A3B8">Descubra como transformamos desafios em tecnologia inovadora e sustentável</text>
+  </g>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="fwBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071830"/>
+      <stop offset="100%" stop-color="#0B2D54"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="400" fill="url(#fwBg)"/>
+
+  <!-- Terminal / Code Screen Window -->
+  <rect x="70" y="55" width="460" height="290" rx="14" fill="#0A1626" stroke="#38BDF8" stroke-width="1.5" filter="drop-shadow(0 15px 30px rgba(0,0,0,0.5))"/>
+  
+  <!-- Window Header -->
+  <rect x="70" y="55" width="460" height="34" rx="14" fill="#0E233D"/>
+  <circle cx="95" cy="72" r="5" fill="#EF4444"/>
+  <circle cx="112" cy="72" r="5" fill="#F59E0B"/>
+  <circle cx="129" cy="72" r="5" fill="#10B981"/>
+  <text x="300" y="76" fill="#94A3B8" font-family="monospace" font-size="11" text-anchor="middle">firmware_core.c — STM32 / FreeRTOS (OTA Active)</text>
+
+  <!-- Firmware Code Lines -->
+  <g font-family="monospace" font-size="12" xml:space="preserve">
+    <text x="95" y="120" fill="#38BDF8">#include <tspan fill="#F59E0B">&lt;smartroot_iot.h&gt;</tspan></text>
+    <text x="95" y="142" fill="#38BDF8">#include <tspan fill="#F59E0B">&lt;freertos/task.h&gt;</tspan></text>
+    <text x="95" y="170" fill="#64748B">// Protocolos: I²C, SPI, RS485 Modbus, MQTT</text>
+    <text x="95" y="192" fill="#C084FC">void <tspan fill="#60A5FA">vTaskSensorTelemetry</tspan>(<tspan fill="#38BDF8">void</tspan> *pvParameters) {</text>
+    <text x="120" y="214" fill="#E2E8F0">  SensorData_t data = read_telemetry_bus();</text>
+    <text x="120" y="236" fill="#E2E8F0">  mqtt_publish_secure(<tspan fill="#34D399">"telemetry/smartroot/node_01"</tspan>, &amp;data);</text>
+    <text x="120" y="258" fill="#F43F5E">  check_firmware_ota_update();</text>
+    <text x="95" y="280" fill="#C084FC">}</text>
+  </g>
+
+  <!-- Chip & Protocol Badges at Bottom -->
+  <g transform="translate(95, 305)">
+    <rect x="0" y="0" width="75" height="22" rx="6" fill="#1E293B" stroke="#334155"/>
+    <text x="37" y="15" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="10" font-weight="700" text-anchor="middle">STM32 / ESP32</text>
+
+    <rect x="85" y="0" width="65" height="22" rx="6" fill="#1E293B" stroke="#334155"/>
+    <text x="117" y="15" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="10" font-weight="700" text-anchor="middle">Modbus</text>
+
+    <rect x="160" y="0" width="60" height="22" rx="6" fill="#1E293B" stroke="#334155"/>
+    <text x="190" y="15" fill="#34D399" font-family="system-ui, sans-serif" font-size="10" font-weight="700" text-anchor="middle">MQTT</text>
+
+    <rect x="230" y="0" width="80" height="22" rx="6" fill="#1E293B" stroke="#334155"/>
+    <text x="270" y="15" fill="#C084FC" font-family="system-ui, sans-serif" font-size="10" font-weight="700" text-anchor="middle">FreeRTOS</text>
+
+    <rect x="320" y="0" width="90" height="22" rx="6" fill="#047857" fill-opacity="0.3" stroke="#10B981"/>
+    <text x="365" y="15" fill="#34D399" font-family="system-ui, sans-serif" font-size="10" font-weight="700" text-anchor="middle">● OTA HABILITADA</text>
+  </g>
+</svg>

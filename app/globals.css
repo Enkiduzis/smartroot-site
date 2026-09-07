@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #0f172a;
+
+    --primary: #0066ff;
+    --primary-dark: #0b2545;
+    --primary-light: #388bfd;
+    --primary-foreground: #ffffff;
+
+    --secondary: #134074;
+    --secondary-foreground: #ffffff;
+
+    --accent: #00d2ff;
+    --accent-foreground: #0b2545;
+
+    --surface: #f8fafc;
+    --surface-card: #ffffff;
+    --surface-muted: #f1f5f9;
+
+    --muted: #64748b;
+    --muted-foreground: #475569;
+
+    --border: #e2e8f0;
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  ::selection {
+    background-color: rgba(0, 102, 255, 0.2);
+    color: #0066ff;
+  }
+}
+
+/* Custom Utilities for Technological Polish */
+.bg-tech-radial {
+  background: radial-gradient(circle at 50% 20%, rgba(0, 102, 255, 0.15), transparent 70%),
+              radial-gradient(circle at 80% 80%, rgba(0, 210, 255, 0.1), transparent 50%);
+}
+
+.bg-hero-deep {
+  background: linear-gradient(135deg, #08192e 0%, #0b2545 45%, #0f3969 80%, #0052cc 100%);
+}
+
+.glow-blue {
+  box-shadow: 0 0 35px -5px rgba(0, 102, 255, 0.35);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-dark {
+  background: rgba(11, 37, 69, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}

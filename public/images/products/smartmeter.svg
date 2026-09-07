@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="meterBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#041426"/>
+      <stop offset="100%" stop-color="#082847"/>
+    </linearGradient>
+    <linearGradient id="dialGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="400" fill="url(#meterBg)"/>
+
+  <!-- Background grid & telemetry pulse -->
+  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
+    <line x1="0" y1="100" x2="600" y2="100"/>
+    <line x1="0" y1="200" x2="600" y2="200"/>
+    <line x1="0" y1="300" x2="600" y2="300"/>
+    <line x1="150" y1="0" x2="150" y2="400"/>
+    <line x1="300" y1="0" x2="300" y2="400"/>
+    <line x1="450" y1="0" x2="450" y2="400"/>
+  </g>
+
+  <!-- Central Telemetry Dashboard Window -->
+  <rect x="70" y="55" width="460" height="290" rx="16" fill="#0A1D33" stroke="#0284C7" stroke-width="1.5" filter="drop-shadow(0 15px 35px rgba(0,0,0,0.5))"/>
+
+  <!-- Window Header -->
+  <rect x="70" y="55" width="460" height="34" rx="16" fill="#0E2847"/>
+  <circle cx="95" cy="72" r="5" fill="#EF4444"/>
+  <circle cx="112" cy="72" r="5" fill="#F59E0B"/>
+  <circle cx="129" cy="72" r="5" fill="#10B981"/>
+  <text x="300" y="76" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">SmartMeter — Medição Inteligente &amp; Telemetria IoT</text>
+
+  <!-- Main Dial / Meter Representation -->
+  <g transform="translate(180, 195)">
+    <!-- Arc gauge background -->
+    <path d="M -70 10 A 70 70 0 1 1 70 10" fill="none" stroke="#1E3A5F" stroke-width="14" stroke-linecap="round"/>
+    <!-- Arc gauge active value -->
+    <path d="M -70 10 A 70 70 0 1 1 45 -52" fill="none" stroke="url(#dialGrad)" stroke-width="14" stroke-linecap="round"/>
+    <!-- Dial Needle -->
+    <line x1="0" y1="0" x2="40" y2="-45" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="0" cy="0" r="9" fill="#F59E0B"/>
+    <circle cx="0" cy="0" r="4" fill="#FFFFFF"/>
+    <text x="0" y="32" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="18" font-weight="800" text-anchor="middle">248.6 <tspan font-size="11" fill="#38BDF8">kWh</tspan></text>
+    <text x="0" y="47" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">CONSUMO REAL-TIME</text>
+  </g>
+
+  <!-- Side Telemetry Metrics Cards -->
+  <g transform="translate(320, 105)">
+    <!-- Metric 1: Tensão -->
+    <rect x="0" y="0" width="190" height="52" rx="8" fill="#0E2642" stroke="#1E3E66" stroke-width="1"/>
+    <text x="14" y="22" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="9">Tensão de Rede (RMS)</text>
+    <text x="14" y="40" fill="#34D399" font-family="system-ui, sans-serif" font-size="14" font-weight="700">220.4 V <tspan font-size="10" fill="#94A3B8">(Estável)</tspan></text>
+
+    <!-- Metric 2: Fator de Potência -->
+    <rect x="0" y="62" width="190" height="52" rx="8" fill="#0E2642" stroke="#1E3E66" stroke-width="1"/>
+    <text x="14" y="84" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="9">Fator de Potência (FP)</text>
+    <text x="14" y="102" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="14" font-weight="700">0.98 <tspan font-size="10" fill="#10B981">● Eficiência Alta</tspan></text>
+
+    <!-- Metric 3: Transmissão LoRa / MQTT -->
+    <rect x="0" y="124" width="190" height="52" rx="8" fill="#0E2642" stroke="#1E3E66" stroke-width="1"/>
+    <text x="14" y="146" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="9">Conexão &amp; Envio</text>
+    <text x="14" y="164" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="13" font-weight="700">MQTT • LoRaWAN 10s</text>
+  </g>
+
+  <!-- Bottom Badges -->
+  <g transform="translate(95, 305)">
+    <rect x="0" y="0" width="90" height="22" rx="6" fill="#132F4C"/>
+    <text x="45" y="15" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="9" font-weight="700" text-anchor="middle">PRECISÃO 0.5%</text>
+
+    <rect x="100" y="0" width="100" height="22" rx="6" fill="#132F4C"/>
+    <text x="150" y="15" fill="#34D399" font-family="system-ui, sans-serif" font-size="9" font-weight="700" text-anchor="middle">ALERTA DE SURTO</text>
+
+    <rect x="210" y="0" width="105" height="22" rx="6" fill="#132F4C"/>
+    <text x="262" y="15" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="9" font-weight="700" text-anchor="middle">HISTÓRICO EM NUVEM</text>
+
+    <rect x="325" y="0" width="85" height="22" rx="6" fill="#047857" fill-opacity="0.3" stroke="#10B981"/>
+    <text x="367" y="15" fill="#34D399" font-family="system-ui, sans-serif" font-size="9" font-weight="700" text-anchor="middle">● OPERACIONAL</text>
+  </g>
+</svg>
