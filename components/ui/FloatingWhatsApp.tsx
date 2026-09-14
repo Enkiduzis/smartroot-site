@@ -10,7 +10,7 @@ export default function FloatingWhatsApp() {
   const defaultMessage = encodeURIComponent(
     "Olá, equipe SmartRoot! Gostaria de tirar dúvidas sobre as soluções de hardware, software e automação."
   );
-  const whatsappUrl = `https://wa.me/55${cleanPhone}?text=${defaultMessage}`;
+  const whatsappUrl = `https://wa.me/${cleanPhone}?text=${defaultMessage}`;
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end print:hidden">
