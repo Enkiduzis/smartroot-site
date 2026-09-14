@@ -14,6 +14,9 @@ import {
   CheckCircle2,
   AlertCircle,
   MessageSquare,
+  MessageCircle,
+  Copy,
+  Check,
   Sparkles,
 } from "lucide-react";
 import { SITE_METADATA } from "@/lib/constants";
@@ -49,6 +52,40 @@ type ContactFormData = z.infer<typeof contactSchema>;
 export default function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [submittedData, setSubmittedData] = useState<ContactFormData | null>(null);
+  const [sendMethod, setSendMethod] = useState<"whatsapp" | "email">("whatsapp");
+  const [copied, setCopied] = useState(false);
+
+  const cleanPhone = SITE_METADATA.contactPhone.replace(/\D/g, "");
+
+  const getWhatsAppMessage = (data: ContactFormData) => {
+    return (
+      `*Novo Contato via Site SmartRoot*\n\n` +
+      `👤 *Nome:* ${data.name}\n` +
+      (data.company ? `🏢 *Empresa:* ${data.company}\n` : "") +
+      `📧 *E-mail:* ${data.email}\n` +
+      `📱 *Telefone/WhatsApp:* ${data.phone}\n` +
+      `📌 *Assunto:* ${data.subject}\n\n` +
+      `💬 *Mensagem / Demanda:*\n${data.message}`
+    );
+  };
+
+  const getEmailSubject = (data: ContactFormData) => {
+    return `[Contato Site SmartRoot] ${data.subject} - ${data.name}`;
+  };
+
+  const getEmailBody = (data: ContactFormData) => {
+    return (
+      `Olá, equipe SmartRoot!\n\n` +
+      `Gostaria de solicitar atendimento através do site institucional:\n\n` +
+      `Nome: ${data.name}\n` +
+      (data.company ? `Empresa: ${data.company}\n` : "") +
+      `E-mail: ${data.email}\n` +
+      `Telefone: ${data.phone}\n` +
+      `Assunto: ${data.subject}\n\n` +
+      `Mensagem / Demanda:\n${data.message}\n\n` +
+      `Atenciosamente,\n${data.name}`
+    );
+  };
 
   const {
     register,
@@ -68,11 +105,31 @@ export default function Contact() {
   });
 
   const onSubmit = async (data: ContactFormData) => {
-    // Simulação de envio seguro para endpoint ou API
-    await new Promise((resolve) => setTimeout(resolve, 800));
     setSubmittedData(data);
     setIsSubmitted(true);
-    reset();
+
+    // 1. Registro em background na API
+    try {
+      fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      }).catch(() => {});
+    } catch {}
+
+    // 2. Acionamento direto do canal escolhido
+    const text = getWhatsAppMessage(data);
+    const waUrl = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(text)}`;
+
+    const subject = getEmailSubject(data);
+    const body = getEmailBody(data);
+    const mailUrl = `mailto:${SITE_METADATA.contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    if (sendMethod === "whatsapp") {
+      window.open(waUrl, "_blank");
+    } else {
+      window.location.href = mailUrl;
+    }
   };
 
   return (
@@ -132,15 +189,15 @@ export default function Contact() {
                       Telefone &amp; WhatsApp
                     </h4>
                     <a
-                      href={`https://wa.me/${SITE_METADATA.contactPhone.replace(/\D/g, "")}`} 
+                      href={`https://wa.me/55${cleanPhone}?text=${encodeURIComponent("Olá, equipe SmartRoot! Gostaria de falar com um especialista.")}`} 
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-base font-semibold text-slate-900 hover:text-primary transition-colors block mt-0.5"
+                      className="text-base font-semibold text-slate-900 hover:text-emerald-600 transition-colors block mt-0.5"
                     >
                       {SITE_METADATA.contactPhone}
                     </a>
                     <span className="text-xs text-slate-500">
-                      Atendimento técnico e comercial
+                      Atendimento rápido via WhatsApp e telefone
                     </span>
                   </div>
                 </div>
