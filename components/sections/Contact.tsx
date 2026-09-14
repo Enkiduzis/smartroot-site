@@ -132,7 +132,9 @@ export default function Contact() {
                       Telefone &amp; WhatsApp
                     </h4>
                     <a
-                      href={`tel:${SITE_METADATA.contactPhone.replace(/\D/g, "")}`}
+                      href={`https://wa.me/${SITE_METADATA.contactPhone.replace(/\D/g, "")}`} 
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-base font-semibold text-slate-900 hover:text-primary transition-colors block mt-0.5"
                     >
                       {SITE_METADATA.contactPhone}

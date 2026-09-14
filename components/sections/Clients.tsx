@@ -25,7 +25,7 @@ export default function Clients() {
         </div>
 
         {/* Clients Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 sm:gap-6">
           {CLIENTS_DATA.map((client, index) => (
             <motion.div
               key={client.id}

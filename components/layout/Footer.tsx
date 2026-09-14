@@ -139,7 +139,12 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-2.5">
                 <Phone className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
-                <a href={`tel:${SITE_METADATA.contactPhone.replace(/\D/g, "")}`} className="hover:text-white transition-colors">
+                <a 
+                  href={`https://wa.me/${SITE_METADATA.contactPhone.replace(/\D/g, "")}`} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
                   {SITE_METADATA.contactPhone}
                 </a>
               </li>

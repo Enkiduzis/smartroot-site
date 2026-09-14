@@ -134,6 +134,28 @@ export const HISTORY_DATA: HistoryMilestone[] = [
 ];
 
 export const SOLUTIONS_DATA: SolutionItem[] = [
+  
+  {
+    id: "sol-educacao",
+    title: "Tecnologia Educacional",
+    subtitle: "Educação e Treinamento Digital",
+    badge: "EdTech & Simulações",
+    description:
+      "Desenvolvimento de ferramentas e simuladores digitais de última geração para enriquecer e potencializar experiências de aprendizagem.",
+    iconName: "GraduationCap",
+    applications: [
+      "Plataformas educacionais interativas e gamificadas",
+      "Simulações técnicas de procedimentos de engenharia",
+      "Jogos sérios (Serious Games) para capacitação",
+      "Ambientes virtuais para laboratórios práticos",
+      "Treinamentos digitais com métricas de retenção",
+    ],
+    features: [
+      "Dashboards de progresso e avaliação pedagógica",
+      "Compatibilidade com realidade mista e web interativa",
+      "Relatórios de conformidade e horas de treinamento",
+    ],
+  },
   {
     id: "sol-automacao",
     title: "Automação Inteligente",
@@ -196,28 +218,7 @@ export const SOLUTIONS_DATA: SolutionItem[] = [
       "Integração com sistemas legados e catracas",
       "Notificações instantâneas de segurança",
     ],
-  },
-  {
-    id: "sol-educacao",
-    title: "Tecnologia Educacional",
-    subtitle: "Educação e Treinamento Digital",
-    badge: "EdTech & Simulações",
-    description:
-      "Desenvolvimento de ferramentas e simuladores digitais de última geração para enriquecer e potencializar experiências de aprendizagem.",
-    iconName: "GraduationCap",
-    applications: [
-      "Plataformas educacionais interativas e gamificadas",
-      "Simulações técnicas de procedimentos de engenharia",
-      "Jogos sérios (Serious Games) para capacitação",
-      "Ambientes virtuais para laboratórios práticos",
-      "Treinamentos digitais com métricas de retenção",
-    ],
-    features: [
-      "Dashboards de progresso e avaliação pedagógica",
-      "Compatibilidade com realidade mista e web interativa",
-      "Relatórios de conformidade e horas de treinamento",
-    ],
-  },
+  }
 ];
 
 export const PRODUCTS_DATA: ProductItem[] = [
@@ -491,12 +492,10 @@ export const PROJECTS_DATA: ProjectItem[] = [
 ];
 
 export const CLIENTS_DATA: ClientItem[] = [
-  { id: "cl-1", name: "Inovatech Hub", segment: "Parque Tecnológico", logo: "/images/clients/client-1.svg" },
-  { id: "cl-2", name: "Nexus Indústrias", segment: "Manufatura Avançada", logo: "/images/clients/client-2.svg" },
-  { id: "cl-3", name: "Alpha Condomínios", segment: "Real Estate & Facilities", logo: "/images/clients/client-3.svg" },
-  { id: "cl-4", name: "EducaTech Global", segment: "Educação Corporativa", logo: "/images/clients/client-4.svg" },
-  { id: "cl-5", name: "Vanguard Logística", segment: "Cadeia de Suprimentos", logo: "/images/clients/client-5.svg" },
-  { id: "cl-6", name: "OmniSmart Health", segment: "Saúde & Ambientes Limpos", logo: "/images/clients/client-6.svg" },
+  { id: "cl-1", name: "Longevidade Saudável", segment: "Educação a distância em Saúde", logo: "/images/clients/client-1.svg" },
+  { id: "cl-2", name: "UNILAB Virtual", segment: "Educação a distância em ambito federal", logo: "/images/clients/client-2.svg" },
+  { id: "cl-3", name: "Condomínio Boulevard Dom Luís", segment: "Automação de gestão condominial", logo: "/images/clients/client-3.jpg" },
+  
 ];
 
 export const TESTIMONIALS_DATA: TestimonialItem[] = [
@@ -536,5 +535,4 @@ export const SOCIAL_LINKS = [
   { name: "LinkedIn", href: "https://www.linkedin.com/company/smarroot/", iconName: "Linkedin" },
   { name: "Instagram", href: "https://www.instagram.com/smartroot_sh/", iconName: "Instagram" },
   { name: "YouTube", href: "https://www.youtube.com/@smartroot-com-br", iconName: "Youtube" },
-  { name: "GitHub", href: "https://github.com/smartroot", iconName: "Github" },
 ];
