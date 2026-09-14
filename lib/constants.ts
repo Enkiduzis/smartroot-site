@@ -494,7 +494,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
 export const CLIENTS_DATA: ClientItem[] = [
   { id: "cl-1", name: "Longevidade Saudável", segment: "Educação a distância em Saúde", logo: "/images/clients/client-1.svg" },
   { id: "cl-2", name: "UNILAB Virtual", segment: "Educação a distância em ambito federal", logo: "/images/clients/client-2.svg" },
-  { id: "cl-3", name: "Condomínio Boulevard Dom Luís", segment: "Automação de gestão condominial", logo: "/images/clients/client-3.jpg" },
+  { id: "cl-3", name: "Condomínio Boulevard Dom Luís", segment: "Automação de gestão condominial", logo: "/images/clients/client-3.svg" },
   
 ];
 
