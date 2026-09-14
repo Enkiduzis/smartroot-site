@@ -189,7 +189,7 @@ export default function Contact() {
                       Telefone &amp; WhatsApp
                     </h4>
                     <a
-                      href={`https://wa.me/55${cleanPhone}?text=${encodeURIComponent("Olá, equipe SmartRoot! Gostaria de falar com um especialista.")}`} 
+                      href={`https://wa.me/${cleanPhone}?text=${encodeURIComponent("Olá, equipe SmartRoot! Gostaria de falar com um especialista.")}`} 
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-base font-semibold text-slate-900 hover:text-emerald-600 transition-colors block mt-0.5"
