@@ -16,7 +16,7 @@ export const SITE_METADATA = {
     "A SmartRoot desenvolve soluções tecnológicas inovadoras em automação, Internet das Coisas (IoT), sistemas inteligentes e tecnologia educacional.",
   tagline: "Tecnologia que Conecta Ideias, Espaços e Pessoas.",
   contactEmail: "contato@smartroot.com.br",
-  contactPhone: "(85) 3067-7461",
+  contactPhone: "+55(85)3067-7461",
   contactAddress: "Rua Monsenhor Bruno, 1137, Sala 1423 - Fortaleza, CE, Brasil",
   workingHours: "Segunda a Sexta, das 09h às 18h",
 };
