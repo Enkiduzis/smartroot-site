@@ -1,9 +1,6 @@
 # SmartRoot — Site Institucional de Alta Tecnologia
 
 Site institucional moderno, responsivo e de alta performance desenvolvido para a **SmartRoot**, empresa de tecnologia especializada em Automação Inteligente, IoT, Segurança Crítica, Engenharia de Hardware/Software e Soluções Educacionais.
-
-Inspirado na organização visual, elegância corporativa e modernidade da [BRISA](https://www.brisabr.com.br/), com identidade tecnológica própria (tons de azul corporativo, ciano luminoso e âmbar de inovação).
-
 ---
 
 ## 🚀 Stack Tecnológica
