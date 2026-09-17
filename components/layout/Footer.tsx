@@ -33,12 +33,12 @@ export default function Footer() {
   };
 
   const footerSolutions = [
-    { label: "SmartMoodle (Integração ERP)", href: "#produtos" },
-    { label: "Selecion and Payment (Plugin Moodle)", href: "#produtos" },
-    { label: "SmartNonStop (Alta Disponibilidade)", href: "#produtos" },
-    { label: "Design de Circuitos PCB & Hardware", href: "#produtos" },
-    { label: "Firmware Embarcado & IoT", href: "#produtos" },
-    { label: "Plataformas SaaS & Software", href: "#produtos" },
+    { label: "SmartMoodle (Integração ERP)", href: "/#produtos" },
+    { label: "Selecion and Payment (Plugin Moodle)", href: "/#produtos" },
+    { label: "SmartNonStop (Alta Disponibilidade)", href: "/#produtos" },
+    { label: "Design de Circuitos PCB & Hardware", href: "/#produtos" },
+    { label: "Firmware Embarcado & IoT", href: "/#produtos" },
+    { label: "Plataformas SaaS & Software", href: "/#produtos" },
   ];
 
   return (

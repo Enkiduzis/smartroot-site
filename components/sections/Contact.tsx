@@ -108,18 +108,9 @@ export default function Contact() {
     setSubmittedData(data);
     setIsSubmitted(true);
 
-    // 1. Registro em background na API
-    try {
-      fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      }).catch(() => {});
-    } catch {}
-
-    // 2. Acionamento direto do canal escolhido
+    // Acionamento direto do canal escolhido
     const text = getWhatsAppMessage(data);
-    const waUrl = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(text)}`;
+    const waUrl = `https://wa.me/55${cleanPhone}?text=${encodeURIComponent(text)}`;
 
     const subject = getEmailSubject(data);
     const body = getEmailBody(data);
